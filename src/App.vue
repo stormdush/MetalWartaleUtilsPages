@@ -32,7 +32,9 @@
     <v-content>
       <v-container fluid fill-height>
         <v-layout justify-center align-center>
+          <v-flex shrink>
 
+          </v-flex>
         </v-layout>
       </v-container>
     </v-content>
@@ -51,12 +53,8 @@ export default {
     source: String
   },
   methods: {
-    showLog() {
-      console.log('>>>>>>>>>>>>>>>>>>>>>');
-    },
-    showTime() {
-      console.log(new Date());
-    }
+    showTime() {},
+    showLog() {}
   }
 };
 </script>
