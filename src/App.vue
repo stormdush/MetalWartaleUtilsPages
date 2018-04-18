@@ -33,7 +33,7 @@
       <v-container fluid fill-height>
         <v-layout justify-center align-center>
           <v-flex shrink>
-
+            <HelloWorld />
           </v-flex>
         </v-layout>
       </v-container>
@@ -45,7 +45,10 @@
 </template>
 
 <script>
+import HelloWorld from './components/HelloWorld.vue';
+
 export default {
+  components: { HelloWorld },
   data: () => ({
     drawer: true
   }),
