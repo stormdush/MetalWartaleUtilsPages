@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+
+
 import {
   Vuetify,
   VApp,
@@ -30,7 +32,7 @@ Vue.use(Vuetify, {
     transitions
   },
   theme: {
-    primary: '#ee44aa',
+    primary: '#1E90FF',
     secondary: '#424242',
     accent: '#82B1FF',
     error: '#FF5252',

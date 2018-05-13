@@ -7,34 +7,48 @@
       app
     >
       <v-list dense>
-        <v-list-tile @click="showLog">
+        <v-list-tile to="/">
           <v-list-tile-action>
-            <v-icon>dashboard</v-icon>
+            <v-icon>home</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Dashboard</v-list-tile-title>
+            <v-list-tile-title>Home</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile @click="showTime">
+        <v-list-tile to="/war">
           <v-list-tile-action>
-            <v-icon>settings</v-icon>
+            <v-icon>gps_fixed</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Settings</v-list-tile-title>
+            <v-list-tile-title>Legion War</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile to="/members">
+          <v-list-tile-action>
+            <v-icon>group</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Members Manager</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile to="/battlefield">
+          <v-list-tile-action>
+            <v-icon>add_location</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Battle Field</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
     <v-toolbar app fixed clipped-left>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title>Solomon</v-toolbar-title>
     </v-toolbar>
     <v-content>
-      <v-container fluid fill-height>
-        <v-layout justify-center align-center>
-          <v-flex shrink>
-            <HelloWorld />
-          </v-flex>
+      <v-container fluid>
+        <v-layout justify-start align-start>
+          <router-view></router-view>
         </v-layout>
       </v-container>
     </v-content>
@@ -45,19 +59,14 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
-
 export default {
-  components: { HelloWorld },
+  components: {},
   data: () => ({
     drawer: true
   }),
   props: {
     source: String
   },
-  methods: {
-    showTime() {},
-    showLog() {}
-  }
+  methods: {}
 };
 </script>
